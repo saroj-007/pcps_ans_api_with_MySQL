@@ -11,6 +11,7 @@ include_once '../LeaveReq.php';
 $database = new Database();
 $db = $database->getConnection();
 $item = new LeaveReq($db);
+var_dump($_POST);
 
 $item->id = isset($_POST['id']) ? $_POST['id'] : die();
 $item->name = $_POST['name'];
